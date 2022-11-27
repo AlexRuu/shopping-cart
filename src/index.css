@@ -91,12 +91,12 @@ img {
 }
 
 .home-title {
-  padding-top: 15rem;
+  padding-top: 5rem;
   font-size: 8rem;
 }
 
 .home-sub {
-  padding-bottom: 20rem;
+  padding-bottom: 10rem;
   font-size: 4rem;
 }
 
@@ -124,6 +124,8 @@ img {
 .btn-enter {
   border-radius: 0%;
   border-width: 0.3rem;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 600;
 }
+
+/* contact */
