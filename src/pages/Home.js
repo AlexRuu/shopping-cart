@@ -7,7 +7,7 @@ const Home = () => {
       <section className="home-text">
         <h1 className="home-title">Clurr's Studio</h1>
         <h4 className="home-sub">All Things Cute & Aesthetic</h4>
-        <Link to="/store" className="btn btn-enter">
+        <Link to="/products" className="btn btn-enter">
           Enter
         </Link>
       </section>

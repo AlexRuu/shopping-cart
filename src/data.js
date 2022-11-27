@@ -1,4 +1,4 @@
-const data = [
+export const store = [
   {
     id: 1,
     title: "Red String of Fate",
@@ -43,4 +43,25 @@ const data = [
   },
 ];
 
-export default data;
+export const links = [
+  {
+    id: 1001,
+    url: "/",
+    name: "Home",
+  },
+  {
+    id: 1002,
+    url: "/about",
+    name: "About",
+  },
+  {
+    id: 1003,
+    url: "/products",
+    name: "Products",
+  },
+  {
+    id: 1004,
+    url: "/contact",
+    name: "Contact",
+  },
+];
