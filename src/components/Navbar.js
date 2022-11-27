@@ -14,14 +14,20 @@ const Navbar = () => {
   useEffect(() => {
     if (location.pathname === "/") {
       setPath(null);
+    } else {
+      setPath(location.pathname);
+      console.log(location.pathname);
     }
+  }, [location.pathname]);
+
+  useEffect(() => {
     const linksHeight = linksRef.current.getBoundingClientRect().height;
     if (showLinks) {
       linksContainerRef.current.style.height = `${linksHeight}px`;
     } else {
       linksContainerRef.current.style.height = "0px";
     }
-  }, [showLinks, location.pathname]);
+  }, [showLinks]);
 
   if (!path) {
     return null;
