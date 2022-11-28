@@ -16,7 +16,6 @@ const Navbar = () => {
       setPath(null);
     } else {
       setPath(location.pathname);
-      console.log(location.pathname);
     }
   }, [location.pathname]);
 

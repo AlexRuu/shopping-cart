@@ -4,6 +4,14 @@ export const store = [
     title: "Red String of Fate",
     price: 15,
     img: "https://d2j6dbq0eux0bg.cloudfront.net/images/61306518/2385525772.jpg",
+    detailTitle: "Unique set of matching pins themed around promise and fate.",
+    details: [
+      "Dimensions: 45 mm",
+      "Hard enamel pin",
+      "Gold plating",
+      "Two rubber backings",
+      "Color may differ in photo due to different screens and lighting",
+    ],
     category: "pins",
   },
   {
@@ -11,6 +19,14 @@ export const store = [
     title: "Poker of Life",
     price: 15,
     img: "https://d2j6dbq0eux0bg.cloudfront.net/images/61306518/2385503932.jpg",
+    detailTitle: "Unique set of floral pins based on each face card in poker.",
+    details: [
+      "Dimensions: ~40 mm",
+      "Hard enamel pin",
+      "Rose gold plating",
+      "Two rubber backing",
+      "Color may differ in photo due to different screens and lighting",
+    ],
     category: "pins",
   },
   {
@@ -18,6 +34,15 @@ export const store = [
     title: "Love Letters",
     price: 14,
     img: "https://d2j6dbq0eux0bg.cloudfront.net/images/61306518/2385520309.jpg",
+    detailTitle:
+      "Let's send out love letters again! Cute series of unique small love letter pins to remind you that love is in the air! For those that order the whole set, you will receive a free gift with your order (while supplies last~)!",
+    details: [
+      "Dimensions: ~45 mm x 20mm",
+      "Hard enamel pin",
+      "Silver plating",
+      "Rubber backing",
+      "Color may differ in photo due to different screens and lighting",
+    ],
     category: "pins",
   },
   {
@@ -25,6 +50,14 @@ export const store = [
     title: "Spirit Bottle",
     price: 15,
     img: "https://d2j6dbq0eux0bg.cloudfront.net/images/61306518/3295370057.jpg",
+    detailTitle: "Spooky spirits in a bottle for your everyday use.",
+    details: [
+      "Dimensions: ~20x 50 mm",
+      "Hard enamel pin",
+      "Silver plating",
+      "Two rubber backing",
+      "Color may differ in photo due to different screens and lighting",
+    ],
     category: "pins",
   },
   {
@@ -32,6 +65,14 @@ export const store = [
     title: "Smol Animals In Bows",
     price: 30,
     img: "https://d2j6dbq0eux0bg.cloudfront.net/images/61306518/3295413528.jpg",
+    detailTitle: "Cute set of mini animal pins with bows!",
+    details: [
+      "Dimensions: ~20 mm",
+      "Hard enamel pins",
+      "Gold plating",
+      "Rubber backing",
+      "Color may differ in photo due to different screens and lighting",
+    ],
     category: "pins",
   },
   {
@@ -39,6 +80,14 @@ export const store = [
     title: "Blood of My Enemies",
     price: 15,
     img: "https://d2j6dbq0eux0bg.cloudfront.net/images/61306518/3295374062.jpg",
+    detailTitle: "A spooky potion for your witchy needs.",
+    details: [
+      "Dimensions: ~45 mm",
+      "Hard enamel pin",
+      "Gold plating",
+      "Two rubber backing",
+      "Color may differ in photo due to different screens and lighting",
+    ],
     category: "pins",
   },
 ];
