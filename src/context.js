@@ -6,13 +6,27 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [items, setItems] = useState([]);
+  const [cart, setCart] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [amount, setAmount] = useState(0);
 
   useEffect(() => {
     setItems(store);
   }, []);
 
   return (
-    <AppContext.Provider value={{ items, setItems }}>
+    <AppContext.Provider
+      value={{
+        items,
+        setItems,
+        cart,
+        setCart,
+        amount,
+        setAmount,
+        total,
+        setTotal,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

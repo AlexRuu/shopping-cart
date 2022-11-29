@@ -5,12 +5,13 @@ const Items = ({ id, img, title, price }) => {
   return (
     <article className="item">
       <div className="img-container">
-        <img src={img} alt={title} className="item-image" />
+        <Link to={`/products/${id}`}>
+          <img src={img} alt={title} className="item-image" />
+        </Link>
       </div>
       <div className="item-footer">
         <h3>{title}</h3>
         <h4>${price}</h4>
-        <Link to={`/products/${id}`}>Buy</Link>
       </div>
     </article>
   );
