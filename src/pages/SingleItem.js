@@ -17,7 +17,7 @@ const SingleItem = () => {
   };
 
   const decrease = () => {
-    if (quantity > 0) {
+    if (quantity > 1) {
       setQuantity(quantity - 1);
     } else {
       return quantity;
@@ -62,6 +62,7 @@ const SingleItem = () => {
                 </button>
               </div>
               <button className="btn-add">Add to Bag</button>
+              <button className="btn-add">Buy Now</button>
             </div>
           </div>
         </div>

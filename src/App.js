@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Store from "./pages/Store";
 import SingleItem from "./pages/SingleItem";
 import Error from "./pages/Error";
+import Cart from "./pages/Cart";
 
 // components
 import Navbar from "./components/Navbar";
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Store />} />
           <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Cart />}></Route>
           <Route path="products/:id" element={<SingleItem />} />
           <Route path="*" element={<Error />} />
         </Routes>

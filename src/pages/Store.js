@@ -3,7 +3,8 @@ import ProductsList from "../components/ProductsList";
 
 const Store = () => {
   return (
-    <div>
+    <div className="store-container">
+      <h1 className="store-title">Store</h1>
       <ProductsList />
     </div>
   );

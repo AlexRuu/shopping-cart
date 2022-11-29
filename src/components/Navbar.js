@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useLocation } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import { BsBag } from "react-icons/bs";
 import { links } from "../data";
+import { useGlobalContext } from "../context";
 
 const Navbar = () => {
+  const { amount } = useGlobalContext();
   const [showLinks, setShowLinks] = useState(false);
   const [path, setPath] = useState("/");
   const linksContainerRef = useRef(null);
@@ -58,6 +60,14 @@ const Navbar = () => {
                 );
               })}
             </ul>
+          </div>
+          <div className="right-nav">
+            <Link to="/cart">
+              <BsBag className="bag-icon" size={28.8} width="2rem" />
+            </Link>
+            <div className="amount-container">
+              {amount !== 0 ? <p className="total-amount">{amount}</p> : null}
+            </div>
           </div>
         </div>
       </nav>
