@@ -4,7 +4,16 @@ import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context";
 
 const Cart = () => {
-  const { cart } = useGlobalContext();
+  const { cart, total, setTotal } = useGlobalContext();
+
+  let cartTotal = cart.reduce((cartTotal, cartItem) => {
+    const { price, amount } = cartItem;
+    const itemTotal = price * amount;
+
+    cartTotal += itemTotal;
+    return cartTotal;
+  }, 0);
+  setTotal(cartTotal);
 
   if (cart.length === 0) {
     return (
@@ -23,6 +32,13 @@ const Cart = () => {
           return <CartItem key={item.id} {...item} />;
         })}
       </div>
+      <footer>
+        <div>
+          <h4>
+            Subtotal <span>${total}</span>
+          </h4>
+        </div>
+      </footer>
     </section>
   );
 };

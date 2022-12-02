@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { store } from "../data";
 import { useGlobalContext } from "../context";
 import { FaPlus, FaMinus } from "react-icons/fa";
@@ -11,7 +11,6 @@ const SingleItem = () => {
   const [quantity, setQuantity] = useState(1);
 
   const addToCart = () => {
-    console.log(cart);
     let checkCart = cart.some((cartCheck) => item.id === cartCheck.id);
     if (checkCart) {
       let tempCart = cart.map((cartItem) => {
@@ -83,7 +82,9 @@ const SingleItem = () => {
               <button className="btn-add" onClick={addToCart}>
                 Add to Bag
               </button>
-              <button className="btn-add">Buy Now</button>
+              <Link to="/cart" onClick={addToCart}>
+                Buy Now
+              </Link>
             </div>
           </div>
         </div>
