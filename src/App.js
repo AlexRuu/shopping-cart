@@ -16,7 +16,7 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <div>
-      <Router basename="/">
+      <Router basename="/shopping-cart">
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
