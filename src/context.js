@@ -7,8 +7,6 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [items, setItems] = useState([]);
   const [cart, setCart] = useState([]);
-  const [total, setTotal] = useState(0);
-  const [amount, setAmount] = useState(0);
 
   useEffect(() => {
     setItems(store);
@@ -21,10 +19,6 @@ const AppProvider = ({ children }) => {
         setItems,
         cart,
         setCart,
-        amount,
-        setAmount,
-        total,
-        setTotal,
       }}
     >
       {children}

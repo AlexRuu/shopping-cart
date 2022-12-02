@@ -6,11 +6,15 @@ import { links } from "../data";
 import { useGlobalContext } from "../context";
 
 const Navbar = () => {
-  const { amount } = useGlobalContext();
+  const { cart } = useGlobalContext();
   const [showLinks, setShowLinks] = useState(false);
   const [path, setPath] = useState("/");
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
+
+  const amountSum = cart.reduce((accumulator, obj) => {
+    return accumulator + obj.amount;
+  }, 0);
 
   const location = useLocation();
   useEffect(() => {
@@ -66,7 +70,9 @@ const Navbar = () => {
               <BsBag className="bag-icon" size={28.8} width="2rem" />
             </Link>
             <div className="amount-container">
-              {amount !== 0 ? <p className="total-amount">{amount}</p> : null}
+              {amountSum !== 0 ? (
+                <p className="total-amount">{amountSum}</p>
+              ) : null}
             </div>
           </div>
         </div>

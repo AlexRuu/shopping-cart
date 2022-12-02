@@ -1,12 +1,31 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { store } from "../data";
+import { useGlobalContext } from "../context";
 import { FaPlus, FaMinus } from "react-icons/fa";
 
 const SingleItem = () => {
+  const { cart, setCart } = useGlobalContext();
   const { id } = useParams();
-  const [item, setItem] = useState([]);
+  const [item, setItem] = useState({});
   const [quantity, setQuantity] = useState(1);
+
+  const addToCart = () => {
+    console.log(cart);
+    let checkCart = cart.some((cartCheck) => item.id === cartCheck.id);
+    if (checkCart) {
+      let tempCart = cart.map((cartItem) => {
+        if (cartItem.id === item.id) {
+          return { ...cartItem, amount: cartItem.amount + quantity };
+        }
+        return cartItem;
+      });
+      setCart(tempCart);
+    } else {
+      let newItem = { ...item, amount: quantity };
+      setCart(cart.concat(newItem));
+    }
+  };
 
   const increase = () => {
     if (quantity < 10) {
@@ -61,7 +80,9 @@ const SingleItem = () => {
                   <FaPlus />
                 </button>
               </div>
-              <button className="btn-add">Add to Bag</button>
+              <button className="btn-add" onClick={addToCart}>
+                Add to Bag
+              </button>
               <button className="btn-add">Buy Now</button>
             </div>
           </div>
