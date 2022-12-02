@@ -683,3 +683,12 @@ nav {
 .addRemove, .remove:hover {
   cursor: pointer;
 }
+
+/* error */
+.error-page {
+  text-align: center;
+}
+
+.error-page h1 {
+  margin-bottom: 10rem;
+}
