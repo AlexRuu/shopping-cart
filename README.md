@@ -9,4 +9,4 @@ An e-commerce page with shopping-cart capabilities.
 
 ### Live DEMO
 
-[Shopping Cart](https://alexruu.github.io/)
+[Shopping Cart](https://alexruu.github.io/shopping-cart)
