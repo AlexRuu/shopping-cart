@@ -67,11 +67,19 @@ const Navbar = () => {
           </div>
           <div className="right-nav">
             <Link to="/cart">
-              <BsBag className="bag-icon" size={28.8} width="2rem" />
+              <BsBag className="bag-icon" size={35} width="2rem" />
             </Link>
-            <div className="amount-container">
+            <div
+              className={
+                amountSum < 10 ? "amount-container" : "amount-container big"
+              }
+            >
               {amountSum !== 0 ? (
-                <p className="total-amount">{amountSum}</p>
+                amountSum >= 10 ? (
+                  <p className="total-amount">{amountSum}</p>
+                ) : (
+                  <p className="total-amount">{amountSum}</p>
+                )
               ) : null}
             </div>
           </div>

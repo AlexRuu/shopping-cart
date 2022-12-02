@@ -33,21 +33,23 @@ const CartItem = ({ id, img, title, price, amount }) => {
   };
 
   return (
-    <article>
+    <article className="cart-item">
       <img src={img} alt={title} />
-      <div>
+      <div className="item-buy">
         <h4>{title}</h4>
-        <h4>${price}</h4>
+        <h4 id="item-price">${price.toFixed(2)}</h4>
       </div>
-      <div>
-        <button onClick={() => decrease(id)}>
+      <div className="upDownButtons">
+        <button onClick={() => decrease(id)} className="addRemove">
           <FaMinus />
         </button>
-        <p>{amount}</p>
-        <button onClick={() => increase(id)}>
+        <h3 className="amount">{amount}</h3>
+        <button onClick={() => increase(id)} className="addRemove">
           <FaPlus />
         </button>
-        <button onClick={() => remove(id)}>
+      </div>
+      <div className="removeButton">
+        <button onClick={() => remove(id)} className="remove">
           <IoClose />
         </button>
       </div>

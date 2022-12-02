@@ -17,15 +17,17 @@ const Cart = () => {
 
   if (cart.length === 0) {
     return (
-      <section>
+      <section className="cart">
         <h2>Cart</h2>
-        <h4>Your cart is currently empty</h4>
-        <Link to="/products">Continue Shopping</Link>
+        <h4 className="empty-cart">Your cart is currently empty...</h4>
+        <Link to="/products" className="btn btn-back">
+          Continue Shopping
+        </Link>
       </section>
     );
   }
   return (
-    <section>
+    <section className="cart">
       <h2>Cart</h2>
       <div>
         {cart.map((item) => {
@@ -33,9 +35,10 @@ const Cart = () => {
         })}
       </div>
       <footer>
-        <div>
+        <div className="cart-total">
           <h4>
-            Subtotal <span>${total}</span>
+            <span></span>
+            <span></span>Subtotal <span>${total.toFixed(2)}</span>
           </h4>
         </div>
       </footer>

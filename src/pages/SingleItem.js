@@ -82,7 +82,7 @@ const SingleItem = () => {
               <button className="btn-add" onClick={addToCart}>
                 Add to Bag
               </button>
-              <Link to="/cart" onClick={addToCart}>
+              <Link to="/cart" className="btn-add buy-now" onClick={addToCart}>
                 Buy Now
               </Link>
             </div>
